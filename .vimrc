@@ -4,7 +4,7 @@ set mouse=a
 set background=dark
 set nowrap
 syntax on
-colorscheme tir_black
+colorscheme jf_ir_black
 set backspace=indent,eol,start
 set number
 set nocompatible
@@ -22,8 +22,8 @@ set smarttab
 set ai "Auto indent
 set si "Smart indet
 "set mouse=a
-"set guifont=Monaco:h11
-"set guifont=Monospace\ 11
+"set guifont=Monaco\ 11
+set guifont=Monospace\ 11
 set ignorecase 
 "Ignore case when searching set smartcase set hlsearch 
 "Highlight search things set incsearch 
