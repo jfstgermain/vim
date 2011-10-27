@@ -31,6 +31,7 @@ set ignorecase
 map <C-T> :NERDTreeToggle<cr> 
 map <F3> :NERDTreeFind<cr> 
 map <C-F> :FufFile */**/<cr> 
+map <C-A> :tabn<cr>
 "map <F3> :TlistToggle<cr> 
 "map <C-Q> :NERDTreeFind<cr> 
 let g:fuf_file_exclude = '\v\~$|\.(class|png|gif|jpg|jar|o|exe|dll|bak|orig|swp)$|(^|[/\\])(\.(hg|git|bzr|svn)|(bytecode|classes|node_modules))($|[/\\])'
