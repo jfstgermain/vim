@@ -25,9 +25,7 @@ set si "Smart indet
 "set guifont=Monaco\ 11
 set guifont=Monospace\ 11
 set ignorecase 
-nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
-set showmode
 
 "Ignore case when searching set smartcase set hlsearch 
 "Highlight search things set incsearch 
