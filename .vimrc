@@ -26,6 +26,7 @@ set si "Smart indet
 set guifont=Monospace\ 11
 set ignorecase 
 set pastetoggle=<F2>
+au BufRead,BufNewFile *.ejs set filetype=html
 
 "Ignore case when searching set smartcase set hlsearch 
 "Highlight search things set incsearch 
