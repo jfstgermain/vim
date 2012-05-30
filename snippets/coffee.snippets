@@ -7,6 +7,18 @@ snippet nota
 	# NOTE (`g:snips_author` - `system("date +%c")`) :
 	# ${1}
 
+snippet log
+	console.log "**** ${1}"
+
+snippet err
+	console.error "!!! ${1}"
+
+snippet warn
+	console.warn "!!! ${1}"
+
+snippet dir
+	console.dir ${1}
+
 #snippet route
 snippet routes
 	async = require 'async'
@@ -54,12 +66,19 @@ snippet routes
 
 		# Update a $1' element
 		app.put '/$1/:id', (req, res) ->
-			res.render '$1/index'
+			$2.update {_id: req.params.id}, req.$3, {}, (err, updateCount) ->
+				if err? then req.flash 'error', 'Error updating $3'
+				else req.flash 'info', '#2 successfully updated'
+				
+				res.render '$1/index'
 
 		# Destroy a $1' element
 		app.del '/$1/:id', (req, res) ->
-			req.flash 'info', 'The record was succesfully deleted'
-			res.render  '$1/index'
+			$2.remove {_id: req.params.id}, (err) ->
+				if err? then req.flash 'error', 'Error deleting $3'
+				else req.flash 'info', 'The record was succesfully deleted'
+
+				res.render  '$1/index'
 
 # Class
 snippet class

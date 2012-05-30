@@ -5,11 +5,12 @@ set background=dark
 set nowrap
 syntax on
 colorscheme jf_ir_black
+"colorscheme mustang
 set backspace=indent,eol,start
 set number
 set nocompatible
 set nu
-filetype indent on
+filetype plugin indent on
 filetype on
 set autoindent
 set ic
@@ -21,22 +22,57 @@ set tabstop=4
 set smarttab
 set ai "Auto indent
 set si "Smart indet
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set undolevels=1000
+" Do not save backups and swp files!!
+set nobackup
+set noswapfile
+" Display whitespaces
+set cursorline
+"autocmd WinEnter * setlocal cursorline
+"autocmd WinLeave * setlocal nocursorline
+autocmd filetype html,xml,ejs set listchars-=tab:>.
 "set mouse=a
 "set guifont=Monaco\ 11
 set guifont=Monospace\ 11
 set ignorecase 
 set pastetoggle=<F2>
 au BufRead,BufNewFile *.ejs set filetype=html
+nnoremap ; :
+
+vmap Q gq
+nmap Q gqap
+
+" Masochistic mappings:
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+
+" jumps to the next row in the editor if same wrapped line
+nnoremap j gj
+nnoremap k gk
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 "Ignore case when searching set smartcase set hlsearch 
 "Highlight search things set incsearch 
 "Make search act like search in modern browsers 
-map <C-T> :NERDTreeToggle<cr> 
+map <C-T> :NERDTreeToggle \| :silent NERDTreeMirror<cr> 
 map <F3> :NERDTreeFind<cr> 
 map <C-F> :FufFile */**/<cr> 
 map <C-A> :tabn<cr>
 
 let NERDTreeIgnore = ['\.js$']
+let NERDTreeHighlightCursorline = 1
 "map <F3> :TlistToggle<cr> 
 "map <C-Q> :NERDTreeFind<cr> 
 "let g:fuf_file_exclude = '\v\~$|\.(class|png|gif|jpg|jar|o|exe|dll|bak|orig|swp)$|(^|[/\\])(\.(hg|git|bzr|svn)|(bytecode|classes|node_modules))($|[/\\])'
