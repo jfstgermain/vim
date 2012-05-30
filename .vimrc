@@ -66,8 +66,8 @@ map <C-l> <C-w>l
 "Ignore case when searching set smartcase set hlsearch 
 "Highlight search things set incsearch 
 "Make search act like search in modern browsers 
-map <C-T> :NERDTreeToggle \| :silent NERDTreeMirror<cr> 
-map <F3> :NERDTreeFind<cr> 
+map <F3> :NERDTreeToggle \| :silent NERDTreeMirror<cr> 
+map <C-F12> :NERDTreeFind<cr> 
 map <C-F> :FufFile */**/<cr> 
 map <C-A> :tabn<cr>
 
