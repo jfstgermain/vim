@@ -1,3 +1,4 @@
+call pathogen#infect()
 set t_Co=256
 set ttymouse=xterm2
 set mouse=a
@@ -45,7 +46,7 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=1
-call pathogen#infect()
+"call pathogen#infect()
 
 au BufRead,BufNewFile *.ejs set filetype=html
 nnoremap ; :
@@ -88,3 +89,4 @@ let NERDTreeHighlightCursorline = 1
 let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp|class|png|gif|jpg|jar)$|(^|[/\\])(\.(hg|git|bzr|svn)|(bytecode|node_modules|classes|exports|gef.*|perspectives.*|gsr.*|jacf.*))($|[/\\])'
 let g:fuf_coveragefile_exclude = '\v\~$|\.(class|png|gif|jpg|jar|o|exe|dll|bak|orig|swp)$|(^|[/\\])(\.(hg|git|bzr|svn)|(bytecode|classes|node_modules))($|[/\\])'
 let g:fuf_dir_exclude = '\v\~$|(^|[/\\])(\.(hg|git|bzr|svn)|(bytecode|node_modules|classes|exports|gef.*|perspectives.*|gsr.*|jacf.*))($|[/\\])'
+"call pathogen#infect()
