@@ -40,6 +40,13 @@ autocmd filetype html,xml,ejs set listchars-=tab:>.
 set guifont=Monospace\ 11
 set ignorecase 
 set pastetoggle=<F2>
+"let g:copypath_copy_to_unnamed_register = 1
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+call pathogen#infect()
+
 au BufRead,BufNewFile *.ejs set filetype=html
 nnoremap ; :
 
@@ -71,7 +78,7 @@ map <C-F12> :NERDTreeFind<cr>
 map <C-F> :FufFile */**/<cr> 
 map <C-A> :tabn<cr>
 
-let NERDTreeIgnore = ['\.js$']
+"let NERDTreeIgnore = ['\.js$']
 let NERDTreeHighlightCursorline = 1
 "map <F3> :TlistToggle<cr> 
 "map <C-Q> :NERDTreeFind<cr> 
