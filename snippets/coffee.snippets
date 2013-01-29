@@ -74,6 +74,21 @@ snippet routes
 
 				res.render  '$1/index'
 
+snippet mongoose
+	mongoose = require 'mongoose'
+	mgTypes = require 'mongoose-3x-types'
+	async = require 'async'
+
+    module.export = do ->
+      if not global.mongooseCnx.modelSchemas?['${1:name}']
+        $1 = new mongoose.Schema
+          ${2:fields}
+	
+	    $1.plugin mgTypes.useTimestamps
+        global.mongooseCnx.model '$1', $1
+
+      return global.mongooseCnx.model '$1'
+
 # Class
 snippet class
 	class ${1:name}
