@@ -37,8 +37,8 @@ set cursorline
 "autocmd WinLeave * setlocal nocursorline
 autocmd filetype html,xml,ejs set listchars-=tab:>.
 "set mouse=a
-"set guifont=Monaco\ 11
-set guifont=Monospace\ 11
+set guifont=Monaco\ 11
+"set guifont=Monospace\ 11
 set ignorecase 
 set pastetoggle=<F2>
 "let g:copypath_copy_to_unnamed_register = 1
@@ -46,6 +46,9 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=1
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+" Always show statusline
+set laststatus=2
 "call pathogen#infect()
 
 au BufRead,BufNewFile *.ejs set filetype=html
@@ -55,10 +58,10 @@ vmap Q gq
 nmap Q gqap
 
 " Masochistic mappings:
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+"map <up> <nop>
+"map <down> <nop>
+"map <left> <nop>
+"map <right> <nop>
 
 
 " jumps to the next row in the editor if same wrapped line
