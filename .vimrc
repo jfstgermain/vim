@@ -1,4 +1,5 @@
 call pathogen#infect()
+call pathogen#helptags()
 set t_Co=256
 set ttymouse=xterm2
 set mouse=a
@@ -83,6 +84,7 @@ map <C-F> :FufFile */**/<cr>
 map <C-A> :tabn<cr>
 
 "let NERDTreeIgnore = ['\.js$']
+let NERDTreeShowHidden=1
 let NERDTreeHighlightCursorline = 1
 "map <F3> :TlistToggle<cr> 
 "map <C-Q> :NERDTreeFind<cr> 
@@ -96,9 +98,11 @@ let g:fuf_dir_exclude = '\v\~$|(^|[/\\])(\.(hg|git|bzr|svn)|(bytecode|node_modul
 "let g:indent_guides_auto_colors = 0
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
-au FileType coffee IndentGuidesEnable
-let indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey   ctermbg=236
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey   ctermbg=237
-let indent_guides_color_change_percent = 20
-let indent_guides_guide_size = 2
+"au FileType coffee IndentGuidesEnable
+"let indent_guides_auto_colors = 0
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey   ctermbg=236
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey   ctermbg=237
+"let indent_guides_color_change_percent = 20
+"let indent_guides_guide_size = 2
+let g:CoffeeAutoTagIncludeVars=1
+
