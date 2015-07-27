@@ -33,6 +33,7 @@ NeoBundle 'mbbill/undotree'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -159,5 +160,9 @@ let g:fuf_dir_exclude = '\v\~$|(^|[/\\])(\.(hg|git|bzr|svn)|(bytecode|node_modul
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey   ctermbg=237
 "let indent_guides_color_change_percent = 20
 "let indent_guides_guide_size = 2
-let g:CoffeeAutoTagIncludeVars=1
+"let g:CoffeeAutoTagIncludeVars=1
+
+autocmd FileType coffee setlocal foldmethod=expr foldexpr=getline(v:lnum)=~'^\s*#'
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+
 
