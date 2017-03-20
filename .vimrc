@@ -27,7 +27,7 @@ NeoBundle 'skwp/greplace.vim'
 "NeoBundle 'lukaszkorecki/CoffeeTags'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'vim-scripts/gitignore'
-NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'bling/vim-airline'
@@ -35,6 +35,7 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'elixir-lang/vim-elixir'
+"NeoBundle 'honva/vim-snippets'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
