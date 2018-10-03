@@ -19,7 +19,7 @@ NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'tpope/vim-git'
-NeoBundle 'ctrlpvim/ctrlp.vim'
+" NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'junegunn/vim-easy-align'
@@ -34,7 +34,12 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'elixir-lang/vim-elixir'
+" NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'junegunn/fzf', { 'dir': '/usr/local/opt/fzf', 'do': './install --all' }
+NeoBundle 'junegunn/fzf.vim'
+NeoBundle 'w0rp/ale'
+NeoBundle 'editorconfig/editorconfig-vim'
+
 "NeoBundle 'honva/vim-snippets'
 
 " You can specify revision/branch/tag.
@@ -166,5 +171,7 @@ let g:fuf_dir_exclude = '\v\~$|(^|[/\\])(\.(hg|git|bzr|svn)|(bytecode|node_modul
 
 autocmd FileType coffee setlocal foldmethod=expr foldexpr=getline(v:lnum)=~'^\s*#'
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+
+map <C-P> :GFile<cr>
 
 
