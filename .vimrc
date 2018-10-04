@@ -19,7 +19,9 @@ NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'tpope/vim-git'
-NeoBundle 'ctrlpvim/ctrlp.vim'
+" NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'junegunn/fzf', { 'dir': '/usr/local/opt/fzf', 'do': './install --all' }
+NeoBundle 'junegunn/fzf.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'junegunn/vim-easy-align'
@@ -27,15 +29,17 @@ NeoBundle 'skwp/greplace.vim'
 "NeoBundle 'lukaszkorecki/CoffeeTags'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'vim-scripts/gitignore'
-"NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'elixir-lang/vim-elixir'
-"NeoBundle 'honva/vim-snippets'
+" NeoBundle 'kchmck/vim-coffee-script'
+" NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'w0rp/ale'
+NeoBundle 'editorconfig/editorconfig-vim'
+" NeoBundle 'honva/vim-snippets'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -140,6 +144,16 @@ map <C-A> :tabn<cr>
 
 let g:airline_powerline_fonts = 1
 let g:ctrlp_working_path_mode = 'ra'
+
+" Start autocompletion after 4 chars
+let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_min_num_identifier_candidate_chars = 4
+let g:ycm_enable_diagnostic_highlighting = 0
+
+" Don't show YCM's preview window [ I find it really annoying ]
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+
 
 "let NERDTreeIgnore = ['\.js$']
 let NERDTreeShowHidden=0
