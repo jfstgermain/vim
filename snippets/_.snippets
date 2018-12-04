@@ -5,31 +5,40 @@ snippet c)
 	`&enc[:2] == "utf" ? "©" : "(c)"` Copyright `strftime("%Y")` ${1:`g:snips_author`}. All Rights Reserved.${2}
 snippet date
 	`strftime("%Y-%m-%d")`
-snippet gc
-	Type(${1: scope}): ${2: subject}
+snippet gcb
+	Type(:bug: fix): ${1: subject}
 
-	${3: body}
+	${2: body}
 
 	JIRA Issue: `system("git rev-parse --abbrev-ref HEAD | cut -d/ -f2 | cut -d- -f1,2 | tr '[:lower:]' '[:upper:]'")`
+snippet gcf
+	Type(:sparkles: feat): ${1: subject}
 
-	# Type should be one of the following:
-	# * feat (new feature)
-	# * fix (bug fix)
-	# * docs (changes to documentation)
-	# * style (formatting, missing semi colons, etc; no code change)
-	# * refactor (refactoring production code)
-	# * test (adding missing tests, refactoring tests; no production code change)
-	# * chore (updating grunt tasks etc; no production code change)
-	# Scope is just the scope of the change. Something like (admin) or (teacher).
-	# Subject should use impertivite tone and say what you did.
-	# The body should go into detail about changes made.
-	# The footer should contain any JIRA (or other tool) issue references or actions.
+	${2: body}
 
-	# For a full example of how to write a good commit message, check out
-	# https://github.com/sparkbox/how_to/tree/master/style/git
+	JIRA Issue: `system("git rev-parse --abbrev-ref HEAD | cut -d/ -f2 | cut -d- -f1,2 | tr '[:lower:]' '[:upper:]'")`
+snippet gcr
+	Type(:hammer: refactor): ${1: subject}
 
-	# ---------------------------------------------------------------------------------
-	# Jira Issue Processing
-	# ISSUE_KEY #comment This is a comment
-	# ISSUE_KEY #done
-	# ---------------------------------------------------------------------------------
+	${2: body}
+
+	JIRA Issue: `system("git rev-parse --abbrev-ref HEAD | cut -d/ -f2 | cut -d- -f1,2 | tr '[:lower:]' '[:upper:]'")`
+snippet gct
+	Type(:white_check_mark: test): ${1: subject}
+
+	${2: body}
+
+	JIRA Issue: `system("git rev-parse --abbrev-ref HEAD | cut -d/ -f2 | cut -d- -f1,2 | tr '[:lower:]' '[:upper:]'")`
+snippet gcd
+	Type(:books: docs): ${1: subject}
+
+	${2: body}
+
+	JIRA Issue: `system("git rev-parse --abbrev-ref HEAD | cut -d/ -f2 | cut -d- -f1,2 | tr '[:lower:]' '[:upper:]'")`
+snippet gcs
+	Type(:lipstick: style): ${1: subject}
+
+	${2: body}
+
+	JIRA Issue: `system("git rev-parse --abbrev-ref HEAD | cut -d/ -f2 | cut -d- -f1,2 | tr '[:lower:]' '[:upper:]'")`
+	
