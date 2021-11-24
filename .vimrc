@@ -1,58 +1,38 @@
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
+call plug#begin('~/.vim/plugged')
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Add or remove your Bundles here:
-NeoBundle 'SirVer/ultisnips'
-"NeoBundle 'MarcWeber/vim-addon-mw-utils'
-"NeoBundle 'tomtom/tlib_vim'
-"NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'tpope/vim-git'
-" NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'junegunn/vim-easy-align'
-NeoBundle 'skwp/greplace.vim'
-"NeoBundle 'lukaszkorecki/CoffeeTags'
-NeoBundle 'terryma/vim-expand-region'
-NeoBundle 'vim-scripts/gitignore'
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'airblade/vim-gitgutter'
-"NeoBundle 'mbbill/undotree'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'kchmck/vim-coffee-script'
-"NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'junegunn/fzf', { 'dir': '/usr/local/opt/fzf', 'do': './install --all' }
-NeoBundle 'junegunn/fzf.vim'
-NeoBundle 'w0rp/ale'
-NeoBundle 'editorconfig/editorconfig-vim'
+Plug 'SirVer/ultisnips'
+"Plug 'MarcWeber/vim-addon-mw-utils'
+"Plug 'tomtom/tlib_vim'
+"Plug 'garbas/vim-snipmate'
+Plug 'tpope/vim-git'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/vim-easy-align'
+Plug 'skwp/greplace.vim'
+"Plug 'lukaszkorecki/CoffeeTags'
+Plug 'terryma/vim-expand-region'
+Plug 'vim-scripts/gitignore'
+Plug 'Valloric/YouCompleteMe'
+Plug 'airblade/vim-gitgutter'
+"Plug 'mbbill/undotree'
+Plug 'bling/vim-airline'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-fugitive'
+"Plug 'kchmck/vim-coffee-script'
+"Plug 'elixir-lang/vim-elixir'
+Plug 'junegunn/fzf', { 'dir': '/usr/local/opt/fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'w0rp/ale'
+Plug 'editorconfig/editorconfig-vim'
 
 " You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+Plug 'Shougo/vimshell', { 'rev' : '3787e5' }
 
-" Required:
-call neobundle#end()
+call plug#end()
 
 " Required:
 filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
 
 set t_Co=256
 set ttymouse=xterm2
@@ -191,5 +171,3 @@ autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 
 map <C-p> :GFile<cr>
 map <C-o> :Files<cr>
-
-
